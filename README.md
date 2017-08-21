@@ -1,4 +1,4 @@
-Ads4You
-==========
+Yandex Tools
+============
 
-Ads4You allows to show any HTML code directly in a footer of your posts or pages.
+This plugin generate the meta tag to validate your site with Yandex Webmasters Tools and the JavaScript code to track with Yandex.Metrika

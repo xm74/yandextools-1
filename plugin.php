@@ -33,7 +33,7 @@ class pluginYandexTools extends Plugin {
 	{
                 global $Url;
 
-                if( $this->getDbField('yandex-verification') && $Url->whereAmI()=='home' ) {
+                if( $this->getValue('yandex-verification') && $Url->whereAmI()=='home' ) {
 	                $html  = PHP_EOL.'<!-- Yandex.Webmaster ID -->'.PHP_EOL;
         	        $html  .= '<meta name="yandex-verification" content="'.$this->getDbField('yandex-verification').'" />'.PHP_EOL;
                 	return $html;

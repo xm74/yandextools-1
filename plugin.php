@@ -34,7 +34,7 @@ class pluginYandexTools extends Plugin {
                 global $Url;
 
                 if( $this->getValue('yandex-verification') && $Url->whereAmI()=='home' ) {
-	                $html  = PHP_EOL.'<!-- Yandex.Webmaster ID -->'.PHP_EOL;
+	                $html   = PHP_EOL.'<!-- Yandex.Webmaster ID -->'.PHP_EOL;
         	        $html  .= '<meta name="yandex-verification" content="'.$this->getDbField('yandex-verification').'" />'.PHP_EOL;
                 	return $html;
 		}
@@ -44,6 +44,8 @@ class pluginYandexTools extends Plugin {
 
 	public function siteBodyEnd()
 	{
+		
+	if( $this->getValue('yametrika-id') ) {
 		$html  = PHP_EOL.'<!-- Yandex.Metrika counter -->'.PHP_EOL;
 		$html .= "<script type='text/javascript'>
     (function (d, w, c) {
@@ -71,11 +73,9 @@ class pluginYandexTools extends Plugin {
     })(document, window, 'yandex_metrika_callbacks');
 </script>
 <noscript><div><img src='https://mc.yandex.ru/watch/".$this->getDbField('yametrika-id')."' style='position:absolute; left:-9999px;' alt='' /></div></noscript>".PHP_EOL;
-
-		if(Text::isEmpty($this->getDbField('yametrika-id'))) {
-			return false;
+			return $html;
 		}
 
-		return $html;
+		return false;
 	}
 }

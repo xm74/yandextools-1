@@ -37,7 +37,7 @@ class pluginYandexTools extends Plugin {
                         return false;
                 }
 
-                $html  = PHP_EOL.'<!-- Yandex.Webmaster counter -->'.PHP_EOL;
+                $html  = PHP_EOL.'<!-- Yandex.Webmaster ID -->'.PHP_EOL;
                 $html  .= '<meta name="yandex-verification" content="'.$this->getDbField('yandex-verification').'" />'.PHP_EOL;
                 return $html;
 	}

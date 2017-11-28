@@ -15,14 +15,14 @@ class pluginYandexTools extends Plugin {
 		global $Language;
 
 		$html  = '<div>';
-		$html .= '<label>'.$Language->get('Yandex.Webmaster').'</label>';
-		$html .= '<input type="text" name="yandex-verification" value="'.$this->getDbField('yandex-verification').'">';
+		$html .= '<label for="yaverification">'.$Language->get('Yandex.Webmaster').'</label>';
+		$html .= '<input id="yaverification" type="text" name="yandex-verification" value="'.$this->getDbField('yandex-verification').'">';
 		$html .= '<span class="tip">'.$Language->get('complete-this-field-with-the-yandex-verification').'</span>';
 		$html .= '</div>';
 
 		$html .= '<div>';
-		$html .= '<label>'.$Language->get('Yandex.Metrika Counter ID').'</label>';
-		$html .= '<input type="text" name="yametrika-id" value="'.$this->getDbField('yametrika-id').'">';
+		$html .= '<label for="yametrika">'.$Language->get('Yandex.Metrika Counter ID').'</label>';
+		$html .= '<input id="yametrika" type="text" name="yametrika-id" value="'.$this->getDbField('yametrika-id').'">';
 		$html .= '<span class="tip">'.$Language->get('complete-this-field-with-the-yametrika-id').'</span>';
 		$html .= '</div>';
 
